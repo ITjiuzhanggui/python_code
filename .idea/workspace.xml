@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d853547-ec71-4412-9798-63b6edcd98e2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LogsIntegration" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/_0.logs.swo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/SmokeTestData_MicroService_clear(1).xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/SmokeTestData_MicroService_clear.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/SmokeTestData_MicroService_ubuntu.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/~$SmokeTestData_MicroService_clear(1).xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/ACRN_2018_BW47_PnP_Weekly_PnP_Test_data_.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zxh.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/python_code.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/0.logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/1.logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/2.logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/3.logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/20190517/4.logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/common.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/extract_clr_layer_size.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/get_file.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/golang/clear-gobench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/golang/gobench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/golang/golang.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/httpd/httpd.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/logs/1558253619" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/memcached/memcached.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/nginx/nginx.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/node/benchmark-octane.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/node/clear-benchmark-octane.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/node/node.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/php/clear-phpbench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/php/php.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/php/phpbench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/python/clear-pybench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/python/pybench.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/python/python.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/redis/redis.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/safe_linux.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/status.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MQ_service的副本/update.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/AY_case_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/AY_ssh_2-v2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/Acrn_BTM.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/Native_BTM.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/Script_python_ZXH.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/calc_P2_fps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/calc_avg_max.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/grabserial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/json_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/p1_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/p2_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/python_script.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_word/test_py.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/Car_odometer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/abstract.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/car.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/car_all.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/coffer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/logging的应用.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/my_Electric.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/name_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/pizza.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_p1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/Merge Cells.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/P1+P2_str.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/cp_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/json_to_xml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/xlsx.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/xxl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xlsx/xxl_1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/练习.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/练习/if-else练习.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="355" />
+    <option name="y" value="47" />
+    <option name="width" value="924" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="python_code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_code" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.local/share/virtualenvs/Flask_Project-W4Y67hwW/bin/python3.6" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myAddSourceRoots" value="true" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d853547-ec71-4412-9798-63b6edcd98e2" name="Default" comment="" />
+      <created>1570814364278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570814364278</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="355" y="47" width="924" height="980" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

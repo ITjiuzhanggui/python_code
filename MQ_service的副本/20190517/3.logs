@@ -1,0 +1,1693 @@
+golang/golang.sh
+[golang] 
+[golang] == golang unit test ==
+[golang] [INFO] Test docker hub official image first:
+[golang] 
+--2019-05-17 06:37:21--  http://www.phoronix-test-suite.com/benchmark-files/golang-benchmarks-121017.tar.gz
+Resolving child-prc.intel.com (child-prc.intel.com)... 10.239.4.160
+Connecting to child-prc.intel.com (child-prc.intel.com)|10.239.4.160|:913... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 950608 (928K) [application/x-gzip]
+Saving to: 'golang-benchmarks-121017.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  5% 42.0K 21s
+    50K .......... .......... .......... .......... .......... 10% 15.1K 37s
+   100K .......... .......... .......... .......... .......... 16% 5.38K 72s
+   150K .......... .......... .......... .......... .......... 21% 5.99K 81s
+   200K .......... .......... .......... .......... .......... 26% 9.16K 75s
+   250K .......... .......... .......... .......... .......... 32% 10.7K 68s
+   300K .......... .......... .......... .......... .......... 37% 13.7K 59s
+   350K .......... .......... .......... .......... .......... 43% 15.7K 52s
+   400K .......... .......... .......... .......... .......... 48% 9.50K 47s
+   450K .......... .......... .......... .......... .......... 53% 17.1K 41s
+   500K .......... .......... .......... .......... .......... 59% 9.37K 36s
+   550K .......... .......... .......... .......... .......... 64% 11.8K 31s
+   600K .......... .......... .......... .......... .......... 70% 7.97K 27s
+   650K .......... .......... .......... .......... .......... 75% 12.1K 22s
+   700K .......... .......... .......... .......... .......... 80% 9.55K 17s
+   750K .......... .......... .......... .......... .......... 86% 8.74K 13s
+   800K .......... .......... .......... .......... .......... 91% 9.75K 8s
+   850K .......... .......... .......... .......... .......... 96% 12.0K 3s
+   900K .......... .......... ........                        100% 9.04K=91s
+
+2019-05-17 06:38:53 (10.2 KB/s) - 'golang-benchmarks-121017.tar.gz' saved [950608/950608]
+
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/05/17 06:39:25 Failed to execute 'perf record [go build -o goperf -a -p 1 cmd/go]': exec: "perf": executable file not found in $PATH
+# sections=/tmp/1.size.txt
+BenchmarkBuild-8        1	27674177490 ns/op	  14613543 binary-size	27674177490 build-ns/op	 209371136 build-peak-RSS-bytes	26257369000 build-user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+consumption=1732KB npkg=15
+2019/05/17 06:39:26 Benchmarking 1 iterations
+2019/05/17 06:39:26 Benchmarking 100 iterations
+2019/05/17 06:39:27 Benchmarking 2000 iterations
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkGarbage/benchmem-MB=64-8     2000	   4123170 ns/op	   9230336 GC-bytes-from-system	    737134 STW-ns/GC	     26536 STW-ns/op	   2784909 allocated-bytes/op	     66276 allocs/op	 217149688 bytes-from-system	 199622656 heap-bytes-from-system	   6592760 other-bytes-from-system	 212271104 peak-RSS-bytes	 253739008 peak-VM-bytes	   1703936 stack-bytes-from-system	  22148979 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/05/17 06:39:36 Benchmarking 1 iterations
+2019/05/17 06:39:36 Benchmarking 100 iterations
+2019/05/17 06:39:36 Benchmarking 10000 iterations
+2019/05/17 06:39:37 Benchmarking 1000000 iterations
+# memprof=/tmp/14.prof.txt
+# cpuprof=/tmp/13.prof.txt
+BenchmarkHTTP-8  1000000	      9633 ns/op	   2394112 GC-bytes-from-system	    273927 P50-ns/op	    502687 P95-ns/op	    836941 P99-ns/op	    102405 STW-ns/GC	        52 STW-ns/op	      4805 allocated-bytes/op	        61 allocs/op	  73335032 bytes-from-system	  65241088 heap-bytes-from-system	   3832056 other-bytes-from-system	  31485952 peak-RSS-bytes	 950095872 peak-VM-bytes	   1867776 stack-bytes-from-system	     70851 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/05/17 06:39:47 Benchmarking 1 iterations
+2019/05/17 06:39:47 Benchmarking 100 iterations
+2019/05/17 06:39:49 Benchmarking 1000 iterations
+# cpuprof=/tmp/10.prof.txt
+# memprof=/tmp/11.prof.txt
+BenchmarkJSON-8     1000	  14882407 ns/op	   7833600 GC-bytes-from-system	    288826 STW-ns/GC	     53432 STW-ns/op	   8301960 allocated-bytes/op	     92685 allocs/op	 213061880 bytes-from-system	 200507392 heap-bytes-from-system	   3999992 other-bytes-from-system	 157151232 peak-RSS-bytes	 249606144 peak-VM-bytes	    720896 stack-bytes-from-system	 111471233 user+sys-ns/op
+[golang] [INFO] Test clear docker image:
+[golang] 
+Downloading packs...
+
+Extracting wget pack for version 29170
+.
+Extracting openssl pack for version 28150
+
+Extracting linux-tools pack for version 29410
+
+Extracting python3-basic pack for version 29440
+
+Extracting c-basic pack for version 29440
+
+Extracting perl-basic pack for version 29270
+
+Extracting nasm pack for version 27210
+
+Extracting binutils pack for version 29440
+
+Extracting bison pack for version 28710
+
+Extracting flex pack for version 28710
+.
+Extracting glibc-locale pack for version 29210
+
+Extracting llvm pack for version 29440
+
+
+Extracting make pack for version 28710
+Starting download of remaining update content. This may take a while...
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Finishing download of update content...
+
+Installing bundle(s) files...
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Calling post-update helper scripts.
+Successfully installed 3 bundles
+--2019-05-17 06:51:13--  http://www.phoronix-test-suite.com/benchmark-files/golang-benchmarks-121017.tar.gz
+Resolving child-prc.intel.com... 10.239.4.80
+Connecting to child-prc.intel.com|10.239.4.80|:913... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 950608 (928K) [application/x-gzip]
+Saving to: 'golang-benchmarks-121017.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  5% 15.3K 57s
+    50K .......... .......... .......... .......... .......... 10% 19.5K 48s
+   100K .......... .......... .......... .......... .......... 16% 4.92K 83s
+   150K .......... .......... .......... .......... .......... 21% 7.10K 84s
+   200K .......... .......... .......... .......... .......... 26% 5.15K 89s
+   250K .......... .......... .......... .......... .......... 32% 5.61K 87s
+   300K .......... .......... .......... .......... .......... 37% 7.13K 80s
+   350K .......... .......... .......... .......... .......... 43% 7.48K 73s
+   400K .......... .......... .......... .......... .......... 48% 9.15K 65s
+   450K .......... .......... .......... .......... .......... 53% 8.97K 57s
+   500K .......... .......... .......... .......... .......... 59% 13.0K 48s
+   550K .......... .......... .......... .......... .......... 64% 2.60K 49s
+   600K .......... .......... .......... .......... .......... 70% 9.32K 41s
+   650K .......... .......... .......... .......... .......... 75% 5.25K 34s
+   700K .......... .......... .......... .......... .......... 80% 6.66K 27s
+   750K .......... .......... .......... .......... .......... 86% 9.82K 19s
+   800K .......... .......... .......... .......... .......... 91% 6.94K 11s
+   850K .......... .......... .......... .......... .......... 96% 5.99K 4s
+   900K .......... .......... ........                        100% 10.8K=2m15s
+
+2019-05-17 06:53:30 (6.87 KB/s) - 'golang-benchmarks-121017.tar.gz' saved [950608/950608]
+
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# sections=/tmp/1.size.txt
+# processes=/tmp/2.perf.txt
+# cpuprof=/tmp/3.perf.txt
+BenchmarkBuild-8        1	23415138984 ns/op	  14613637 binary-size	23415138984 build-ns/op	 206512128 build-peak-RSS-bytes	22678053000 build-user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+consumption=1732KB npkg=15
+2019/05/17 06:54:23 Benchmarking 1 iterations
+2019/05/17 06:54:23 Benchmarking 100 iterations
+2019/05/17 06:54:23 Benchmarking 5000 iterations
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkGarbage/benchmem-MB=64-8     5000	   2890758 ns/op	   9029632 GC-bytes-from-system	    243286 STW-ns/GC	      8369 STW-ns/op	   2782646 allocated-bytes/op	     66272 allocs/op	 217739512 bytes-from-system	 199950336 heap-bytes-from-system	   7383288 other-bytes-from-system	 206123008 peak-RSS-bytes	 254328832 peak-VM-bytes	   1376256 stack-bytes-from-system	  22370174 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/05/17 06:54:39 Benchmarking 1 iterations
+2019/05/17 06:54:39 Benchmarking 100 iterations
+2019/05/17 06:54:39 Benchmarking 10000 iterations
+2019/05/17 06:54:39 Benchmarking 1000000 iterations
+# cpuprof=/tmp/13.prof.txt
+# memprof=/tmp/14.prof.txt
+BenchmarkHTTP-8  1000000	      9544 ns/op	   2394112 GC-bytes-from-system	    271489 P50-ns/op	    496711 P95-ns/op	    840198 P99-ns/op	     86765 STW-ns/GC	        44 STW-ns/op	      4805 allocated-bytes/op	        61 allocs/op	  73335032 bytes-from-system	  65241088 heap-bytes-from-system	   3832056 other-bytes-from-system	  33984512 peak-RSS-bytes	1625767936 peak-VM-bytes	   1867776 stack-bytes-from-system	     70770 user+sys-ns/op
+2019/05/17 06:54:49 Benchmarking 1 iterations
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/05/17 06:54:49 Benchmarking 100 iterations
+2019/05/17 06:54:51 Benchmarking 1000 iterations
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkJSON-8     1000	  14809337 ns/op	   7407616 GC-bytes-from-system	    321700 STW-ns/GC	     60479 STW-ns/op	   8353395 allocated-bytes/op	     92686 allocs/op	 212996344 bytes-from-system	 200605696 heap-bytes-from-system	   4262136 other-bytes-from-system	 158732288 peak-RSS-bytes	 249540608 peak-VM-bytes	    720896 stack-bytes-from-system	 111865440 user+sys-ns/op
+httpd/httpd.sh
+[httpd] 
+[httpd] == httpd unit test ==
+sudo: swupd: command not found
+sudo: swupd: command not found
+[httpd] [INFO] Test docker hub official image first:
+[httpd] 
+7e9ece2fd99e979134542d33218f510095a58f3284731d18c67da7d5fe739758
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        Apache/2.4.39
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        45 bytes
+
+Concurrency Level:      50
+Time taken for tests:   2.738 seconds
+Complete requests:      100000
+Failed requests:        7
+   (Connect: 0, Receive: 0, Length: 7, Exceptions: 0)
+Keep-Alive requests:    99031
+Total transferred:      32455434 bytes
+HTML transferred:       4499685 bytes
+Requests per second:    36521.72 [#/sec] (mean)
+Time per request:       1.369 [ms] (mean)
+Time per request:       0.027 [ms] (mean, across all concurrent requests)
+Transfer rate:          11575.47 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       2
+Processing:     0    1   1.3      1      36
+Waiting:        0    1   1.3      1      36
+Total:          0    1   1.4      1      38
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      2
+  80%      2
+  90%      3
+  95%      3
+  98%      4
+  99%      5
+ 100%     38 (longest request)
+httpd-server
+[httpd] [INFO] Test clear docker image:
+[httpd] 
+65b99d068b980a5146560ab15255d7827210c4e506f351138be75faaae8ad790
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        Apache/2.4.39
+Server Hostname:        localhost
+Server Port:            8088
+
+Document Path:          /
+Document Length:        45 bytes
+
+Concurrency Level:      50
+Time taken for tests:   2.773 seconds
+Complete requests:      100000
+Failed requests:        24
+   (Connect: 0, Receive: 0, Length: 24, Exceptions: 0)
+Keep-Alive requests:    99021
+Total transferred:      32476953 bytes
+HTML transferred:       4498920 bytes
+Requests per second:    36057.72 [#/sec] (mean)
+Time per request:       1.387 [ms] (mean)
+Time per request:       0.028 [ms] (mean, across all concurrent requests)
+Transfer rate:          11435.99 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       3
+Processing:     0    1   4.7      1     181
+Waiting:        0    1   4.7      1     181
+Total:          0    1   4.7      1     181
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      2
+  80%      2
+  90%      2
+  95%      3
+  98%      3
+  99%      5
+ 100%    181 (longest request)
+clr-httpd-server
+memcached/memcached.sh
+[memcached] 
+[memcached] == memcached unit test ==
+609ce59127c6        memcached-network   bridge              local
+[memcached] [INFO] Test docker hub official image first:
+[memcached] 
+c59f3f87a25feb7903b88f8851f2a9104090d2f3dc18221a3583bc7cbc206b28
+[RUN #1] Preparing benchmark client...
+[RUN #1] Launching threads now...
+[RUN #1 8%,   0 secs]  4 threads:      160613 ops,  174676 (avg:  174676) ops/sec, 4.98MB/sec (avg: 4.98MB/sec),  1.14 (avg:  1.14) msec latency[RUN #1 16%,   1 secs]  4 threads:      329265 ops,  168867 (avg:  171652) ops/sec, 4.81MB/sec (avg: 4.89MB/sec),  1.18 (avg:  1.16) msec latency[RUN #1 25%,   2 secs]  4 threads:      499664 ops,  170382 (avg:  171217) ops/sec, 4.86MB/sec (avg: 4.88MB/sec),  1.18 (avg:  1.17) msec latency[RUN #1 33%,   3 secs]  4 threads:      665519 ops,  165817 (avg:  169839) ops/sec, 4.73MB/sec (avg: 4.84MB/sec),  1.20 (avg:  1.18) msec latency[RUN #1 41%,   4 secs]  4 threads:      828165 ops,  162630 (avg:  168373) ops/sec, 4.63MB/sec (avg: 4.80MB/sec),  1.23 (avg:  1.19) msec latency[RUN #1 50%,   5 secs]  4 threads:      995231 ops,  167042 (avg:  168148) ops/sec, 4.76MB/sec (avg: 4.79MB/sec),  1.20 (avg:  1.19) msec latency[RUN #1 58%,   6 secs]  4 threads:     1165790 ops,  170542 (avg:  168494) ops/sec, 4.86MB/sec (avg: 4.80MB/sec),  1.17 (avg:  1.19) msec latency[RUN #1 67%,   7 secs]  4 threads:     1330199 ops,  164394 (avg:  167976) ops/sec, 4.69MB/sec (avg: 4.79MB/sec),  1.22 (avg:  1.19) msec latency[RUN #1 75%,   8 secs]  4 threads:     1492665 ops,  162450 (avg:  167357) ops/sec, 4.63MB/sec (avg: 4.77MB/sec),  1.23 (avg:  1.19) msec latency[RUN #1 83%,   9 secs]  4 threads:     1658221 ops,  165532 (avg:  167173) ops/sec, 4.72MB/sec (avg: 4.77MB/sec),  1.21 (avg:  1.19) msec latency[RUN #1 91%,  10 secs]  4 threads:     1821664 ops,  163419 (avg:  166829) ops/sec, 4.66MB/sec (avg: 4.76MB/sec),  1.22 (avg:  1.20) msec latency[RUN #1 99%,  11 secs]  4 threads:     1983254 ops,  173434 (avg:  167348) ops/sec, 4.94MB/sec (avg: 4.77MB/sec),  1.15 (avg:  1.19) msec latency[RUN #1 100%,  11 secs]  0 threads:     2000000 ops,  173434 (avg:  167937) ops/sec, 4.94MB/sec (avg: 4.79MB/sec),  1.15 (avg:  1.19) msec latency
+
+4         Threads
+50        Connections per thread
+10000     Requests per client
+
+
+ALL STATS
+=========================================================================
+Type         Ops/sec     Hits/sec   Misses/sec      Latency       KB/sec 
+-------------------------------------------------------------------------
+Sets        14253.42          ---          ---      1.21300       972.49 
+Gets       142377.55         0.00    142377.55      1.18700      3599.65 
+Waits           0.00          ---          ---      0.00000          --- 
+Totals     156630.97         0.00    142377.55      1.18900      4572.14 
+
+
+Request Latency Distribution
+Type     <= msec         Percent
+------------------------------------------------------------------------
+SET       0.032         0.00
+SET       0.033         0.00
+SET       0.035         0.00
+SET       0.044         0.00
+SET       0.054         0.00
+SET       0.059         0.00
+SET       0.060         0.00
+SET       0.061         0.00
+SET       0.062         0.00
+SET       0.080         0.01
+SET       0.084         0.01
+SET       0.092         0.01
+SET       0.099         0.01
+SET       0.100         0.01
+SET       0.110         0.01
+SET       0.120         0.01
+SET       0.130         0.01
+SET       0.140         0.01
+SET       0.150         0.01
+SET       0.160         0.02
+SET       0.170         0.02
+SET       0.180         0.02
+SET       0.190         0.02
+SET       0.200         0.03
+SET       0.210         0.03
+SET       0.220         0.03
+SET       0.230         0.04
+SET       0.240         0.05
+SET       0.250         0.09
+SET       0.260         0.19
+SET       0.270         0.24
+SET       0.280         0.25
+SET       0.290         0.26
+SET       0.300         0.27
+SET       0.310         0.28
+SET       0.320         0.30
+SET       0.330         0.32
+SET       0.340         0.35
+SET       0.350         0.37
+SET       0.360         0.38
+SET       0.370         0.39
+SET       0.380         0.41
+SET       0.390         0.44
+SET       0.400         0.51
+SET       0.410         0.65
+SET       0.420         0.82
+SET       0.430         0.97
+SET       0.440         1.04
+SET       0.450         1.08
+SET       0.460         1.11
+SET       0.470         1.13
+SET       0.480         1.16
+SET       0.490         1.18
+SET       0.500         1.20
+SET       0.510         1.22
+SET       0.520         1.24
+SET       0.530         1.26
+SET       0.540         1.28
+SET       0.550         1.30
+SET       0.560         1.32
+SET       0.570         1.35
+SET       0.580         1.38
+SET       0.590         1.40
+SET       0.600         1.44
+SET       0.610         1.48
+SET       0.620         1.53
+SET       0.630         1.58
+SET       0.640         1.63
+SET       0.650         1.67
+SET       0.660         1.73
+SET       0.670         1.81
+SET       0.680         1.88
+SET       0.690         1.97
+SET       0.700         2.10
+SET       0.710         2.22
+SET       0.720         2.33
+SET       0.730         2.45
+SET       0.740         2.55
+SET       0.750         2.66
+SET       0.760         2.81
+SET       0.770         2.98
+SET       0.780         3.16
+SET       0.790         3.39
+SET       0.800         3.62
+SET       0.810         3.85
+SET       0.820         4.07
+SET       0.830         4.26
+SET       0.840         4.42
+SET       0.850         4.56
+SET       0.860         4.70
+SET       0.870         4.88
+SET       0.880         5.11
+SET       0.890         5.38
+SET       0.900         5.62
+SET       0.910         5.89
+SET       0.920         6.16
+SET       0.930         6.44
+SET       0.940         6.71
+SET       0.950         6.98
+SET       0.960         7.25
+SET       0.970         7.48
+SET       0.980         7.70
+SET       0.990         7.91
+SET       1.000         9.15
+SET       1.100        29.88
+SET       1.200        70.29
+SET       1.300        95.01
+SET       1.400        98.18
+SET       1.500        98.96
+SET       1.600        99.20
+SET       1.700        99.30
+SET       1.800        99.38
+SET       1.900        99.43
+SET       2.000        99.48
+SET       2.100        99.52
+SET       2.200        99.56
+SET       2.300        99.59
+SET       2.400        99.60
+SET       2.500        99.62
+SET       2.600        99.63
+SET       2.700        99.64
+SET       2.800        99.65
+SET       2.900        99.66
+SET       3.000        99.66
+SET       3.100        99.67
+SET       3.200        99.68
+SET       3.300        99.68
+SET       3.400        99.69
+SET       3.500        99.69
+SET       3.600        99.70
+SET       3.700        99.70
+SET       3.800        99.70
+SET       3.900        99.71
+SET       4.000        99.72
+SET       4.100        99.72
+SET       4.200        99.73
+SET       4.300        99.73
+SET       4.400        99.74
+SET       4.500        99.75
+SET       4.600        99.75
+SET       4.700        99.76
+SET       4.800        99.77
+SET       4.900        99.77
+SET       5.000        99.78
+SET       5.100        99.78
+SET       5.200        99.78
+SET       5.300        99.78
+SET       5.400        99.79
+SET       5.500        99.79
+SET       5.600        99.79
+SET       5.700        99.80
+SET       5.800        99.80
+SET       5.900        99.80
+SET       6.100        99.80
+SET       6.300        99.80
+SET       6.500        99.80
+SET       6.600        99.80
+SET       6.700        99.81
+SET       6.800        99.81
+SET       6.900        99.81
+SET       7.000        99.81
+SET       7.100        99.81
+SET       7.200        99.81
+SET       7.300        99.82
+SET       7.400        99.82
+SET       7.500        99.82
+SET       7.600        99.83
+SET       7.800        99.83
+SET       7.900        99.83
+SET       8.500        99.83
+SET       8.600        99.83
+SET       8.700        99.83
+SET       8.800        99.83
+SET       8.900        99.84
+SET       9.000        99.84
+SET       9.100        99.84
+SET       9.200        99.84
+SET       9.300        99.84
+SET       9.400        99.84
+SET       9.500        99.84
+SET       9.600        99.85
+SET       9.800        99.85
+SET       9.900        99.85
+SET      10.000        99.85
+SET      11.000        99.85
+SET      12.000        99.87
+SET      13.000        99.87
+SET      14.000        99.89
+SET      15.000        99.89
+SET      16.000        99.89
+SET      17.000        99.89
+SET      18.000        99.90
+SET      19.000        99.90
+SET      20.000        99.90
+SET      21.000        99.90
+SET      22.000        99.90
+SET      23.000        99.95
+SET      24.000       100.00
+---
+GET       0.024         0.00
+GET       0.032         0.00
+GET       0.036         0.00
+GET       0.037         0.00
+GET       0.038         0.00
+GET       0.042         0.00
+GET       0.043         0.00
+GET       0.045         0.00
+GET       0.052         0.00
+GET       0.053         0.00
+GET       0.055         0.00
+GET       0.057         0.00
+GET       0.058         0.00
+GET       0.063         0.00
+GET       0.065         0.00
+GET       0.066         0.00
+GET       0.067         0.00
+GET       0.068         0.00
+GET       0.069         0.00
+GET       0.070         0.00
+GET       0.071         0.00
+GET       0.072         0.00
+GET       0.073         0.00
+GET       0.074         0.00
+GET       0.075         0.00
+GET       0.077         0.00
+GET       0.079         0.00
+GET       0.080         0.00
+GET       0.082         0.00
+GET       0.085         0.00
+GET       0.087         0.00
+GET       0.088         0.00
+GET       0.089         0.00
+GET       0.091         0.00
+GET       0.094         0.00
+GET       0.097         0.00
+GET       0.099         0.00
+GET       0.100         0.00
+GET       0.110         0.00
+GET       0.120         0.00
+GET       0.130         0.01
+GET       0.140         0.01
+GET       0.150         0.01
+GET       0.160         0.01
+GET       0.170         0.01
+GET       0.180         0.01
+GET       0.190         0.01
+GET       0.200         0.01
+GET       0.210         0.02
+GET       0.220         0.02
+GET       0.230         0.02
+GET       0.240         0.03
+GET       0.250         0.08
+GET       0.260         0.18
+GET       0.270         0.22
+GET       0.280         0.24
+GET       0.290         0.25
+GET       0.300         0.26
+GET       0.310         0.28
+GET       0.320         0.29
+GET       0.330         0.32
+GET       0.340         0.33
+GET       0.350         0.35
+GET       0.360         0.36
+GET       0.370         0.37
+GET       0.380         0.39
+GET       0.390         0.43
+GET       0.400         0.51
+GET       0.410         0.66
+GET       0.420         0.83
+GET       0.430         0.96
+GET       0.440         1.02
+GET       0.450         1.06
+GET       0.460         1.09
+GET       0.470         1.12
+GET       0.480         1.14
+GET       0.490         1.16
+GET       0.500         1.19
+GET       0.510         1.21
+GET       0.520         1.23
+GET       0.530         1.25
+GET       0.540         1.28
+GET       0.550         1.30
+GET       0.560         1.32
+GET       0.570         1.35
+GET       0.580         1.38
+GET       0.590         1.41
+GET       0.600         1.44
+GET       0.610         1.48
+GET       0.620         1.52
+GET       0.630         1.57
+GET       0.640         1.62
+GET       0.650         1.68
+GET       0.660         1.74
+GET       0.670         1.81
+GET       0.680         1.90
+GET       0.690         2.00
+GET       0.700         2.12
+GET       0.710         2.22
+GET       0.720         2.34
+GET       0.730         2.45
+GET       0.740         2.56
+GET       0.750         2.69
+GET       0.760         2.84
+GET       0.770         3.02
+GET       0.780         3.22
+GET       0.790         3.44
+GET       0.800         3.66
+GET       0.810         3.88
+GET       0.820         4.08
+GET       0.830         4.25
+GET       0.840         4.41
+GET       0.850         4.56
+GET       0.860         4.74
+GET       0.870         4.94
+GET       0.880         5.17
+GET       0.890         5.42
+GET       0.900         5.68
+GET       0.910         5.94
+GET       0.920         6.22
+GET       0.930         6.52
+GET       0.940         6.81
+GET       0.950         7.08
+GET       0.960         7.34
+GET       0.970         7.57
+GET       0.980         7.78
+GET       0.990         7.98
+GET       1.000         9.24
+GET       1.100        32.77
+GET       1.200        70.99
+GET       1.300        95.38
+GET       1.400        98.36
+GET       1.500        99.10
+GET       1.600        99.33
+GET       1.700        99.46
+GET       1.800        99.54
+GET       1.900        99.59
+GET       2.000        99.63
+GET       2.100        99.67
+GET       2.200        99.70
+GET       2.300        99.71
+GET       2.400        99.73
+GET       2.500        99.75
+GET       2.600        99.76
+GET       2.700        99.77
+GET       2.800        99.78
+GET       2.900        99.79
+GET       3.000        99.79
+GET       3.100        99.80
+GET       3.200        99.81
+GET       3.300        99.81
+GET       3.400        99.81
+GET       3.500        99.82
+GET       3.600        99.82
+GET       3.700        99.82
+GET       3.800        99.83
+GET       3.900        99.83
+GET       4.000        99.83
+GET       4.100        99.84
+GET       4.200        99.84
+GET       4.300        99.84
+GET       4.400        99.85
+GET       4.500        99.85
+GET       4.600        99.86
+GET       4.700        99.86
+GET       4.800        99.87
+GET       4.900        99.87
+GET       5.000        99.88
+GET       5.100        99.88
+GET       5.200        99.88
+GET       5.300        99.88
+GET       5.400        99.89
+GET       5.500        99.89
+GET       5.600        99.89
+GET       5.700        99.89
+GET       5.800        99.90
+GET       5.900        99.90
+GET       6.000        99.90
+GET       6.100        99.90
+GET       6.200        99.90
+GET       6.300        99.90
+GET       6.400        99.90
+GET       6.500        99.90
+GET       6.600        99.90
+GET       6.700        99.91
+GET       6.800        99.91
+GET       6.900        99.91
+GET       7.000        99.91
+GET       7.100        99.91
+GET       7.200        99.91
+GET       7.300        99.92
+GET       7.400        99.92
+GET       7.500        99.92
+GET       7.600        99.92
+GET       7.700        99.92
+GET       7.800        99.92
+GET       7.900        99.92
+GET       8.000        99.92
+GET       8.100        99.92
+GET       8.200        99.92
+GET       8.300        99.92
+GET       8.400        99.92
+GET       8.500        99.92
+GET       8.600        99.93
+GET       8.700        99.93
+GET       8.800        99.93
+GET       8.900        99.93
+GET       9.000        99.93
+GET       9.100        99.93
+GET       9.200        99.93
+GET       9.300        99.94
+GET       9.400        99.94
+GET       9.500        99.94
+GET       9.600        99.94
+GET       9.700        99.94
+GET       9.800        99.94
+GET       9.900        99.94
+GET      10.000        99.94
+GET      11.000        99.95
+GET      12.000        99.96
+GET      13.000        99.97
+GET      14.000        99.98
+GET      15.000        99.99
+GET      16.000        99.99
+GET      17.000        99.99
+GET      18.000        99.99
+GET      19.000       100.00
+GET      20.000       100.00
+---
+memcached-server
+[memcached] [INFO] Test clear docker image:
+[memcached] 
+4dc6dc748fd8acb369d858c737bf4ea7affa830fd99083a5553e890e0fc7d58d
+[RUN #1] Preparing benchmark client...
+[RUN #1] Launching threads now...
+[RUN #1 9%,   0 secs]  4 threads:      170604 ops,  170689 (avg:  170689) ops/sec, 4.87MB/sec (avg: 4.87MB/sec),  1.17 (avg:  1.17) msec latency[RUN #1 17%,   1 secs]  4 threads:      344477 ops,  173835 (avg:  172263) ops/sec, 4.95MB/sec (avg: 4.91MB/sec),  1.15 (avg:  1.16) msec latency[RUN #1 26%,   2 secs]  4 threads:      514658 ops,  170165 (avg:  171563) ops/sec, 4.85MB/sec (avg: 4.89MB/sec),  1.17 (avg:  1.16) msec latency[RUN #1 34%,   4 secs]  4 threads:      685543 ops,  170835 (avg:  171381) ops/sec, 4.87MB/sec (avg: 4.89MB/sec),  1.17 (avg:  1.17) msec latency[RUN #1 43%,   5 secs]  4 threads:      855779 ops,  170211 (avg:  171147) ops/sec, 4.85MB/sec (avg: 4.88MB/sec),  1.17 (avg:  1.17) msec latency[RUN #1 51%,   6 secs]  4 threads:     1027714 ops,  171884 (avg:  171270) ops/sec, 4.90MB/sec (avg: 4.88MB/sec),  1.16 (avg:  1.17) msec latency[RUN #1 60%,   7 secs]  4 threads:     1197574 ops,  169811 (avg:  171062) ops/sec, 4.84MB/sec (avg: 4.88MB/sec),  1.18 (avg:  1.17) msec latency[RUN #1 68%,   8 secs]  4 threads:     1364624 ops,  167026 (avg:  170557) ops/sec, 4.76MB/sec (avg: 4.86MB/sec),  1.20 (avg:  1.17) msec latency[RUN #1 77%,   9 secs]  4 threads:     1537289 ops,  172606 (avg:  170785) ops/sec, 4.92MB/sec (avg: 4.87MB/sec),  1.16 (avg:  1.17) msec latency[RUN #1 85%,  10 secs]  4 threads:     1708226 ops,  170886 (avg:  170795) ops/sec, 4.87MB/sec (avg: 4.87MB/sec),  1.17 (avg:  1.17) msec latency[RUN #1 94%,  11 secs]  4 threads:     1874535 ops,  166285 (avg:  170385) ops/sec, 4.74MB/sec (avg: 4.86MB/sec),  1.20 (avg:  1.17) msec latency[RUN #1 100%,  11 secs]  0 threads:     2000000 ops,  166285 (avg:  170118) ops/sec, 4.74MB/sec (avg: 4.85MB/sec),  1.20 (avg:  1.17) msec latency
+
+4         Threads
+50        Connections per thread
+10000     Requests per client
+
+
+ALL STATS
+=========================================================================
+Type         Ops/sec     Hits/sec   Misses/sec      Latency       KB/sec 
+-------------------------------------------------------------------------
+Sets        15445.12          ---          ---      1.17900      1053.80 
+Gets       154281.52         0.00    154281.52      1.17300      3900.61 
+Waits           0.00          ---          ---      0.00000          --- 
+Totals     169726.64         0.00    154281.52      1.17400      4954.41 
+
+
+Request Latency Distribution
+Type     <= msec         Percent
+------------------------------------------------------------------------
+SET       0.031         0.00
+SET       0.039         0.00
+SET       0.042         0.00
+SET       0.043         0.00
+SET       0.045         0.00
+SET       0.048         0.00
+SET       0.052         0.00
+SET       0.056         0.00
+SET       0.058         0.00
+SET       0.059         0.01
+SET       0.061         0.01
+SET       0.085         0.01
+SET       0.086         0.01
+SET       0.088         0.01
+SET       0.091         0.01
+SET       0.093         0.01
+SET       0.095         0.01
+SET       0.100         0.01
+SET       0.110         0.01
+SET       0.130         0.02
+SET       0.140         0.02
+SET       0.150         0.02
+SET       0.160         0.02
+SET       0.170         0.03
+SET       0.180         0.04
+SET       0.190         0.05
+SET       0.200         0.09
+SET       0.210         0.10
+SET       0.220         0.10
+SET       0.230         0.12
+SET       0.240         0.13
+SET       0.250         0.14
+SET       0.260         0.14
+SET       0.270         0.15
+SET       0.280         0.16
+SET       0.290         0.17
+SET       0.300         0.19
+SET       0.310         0.20
+SET       0.320         0.22
+SET       0.330         0.23
+SET       0.340         0.24
+SET       0.350         0.26
+SET       0.360         0.27
+SET       0.370         0.29
+SET       0.380         0.31
+SET       0.390         0.36
+SET       0.400         0.40
+SET       0.410         0.44
+SET       0.420         0.47
+SET       0.430         0.50
+SET       0.440         0.52
+SET       0.450         0.54
+SET       0.460         0.57
+SET       0.470         0.61
+SET       0.480         0.64
+SET       0.490         0.69
+SET       0.500         0.74
+SET       0.510         0.79
+SET       0.520         0.85
+SET       0.530         0.91
+SET       0.540         1.00
+SET       0.550         1.09
+SET       0.560         1.19
+SET       0.570         1.29
+SET       0.580         1.39
+SET       0.590         1.48
+SET       0.600         1.57
+SET       0.610         1.67
+SET       0.620         1.77
+SET       0.630         1.86
+SET       0.640         1.96
+SET       0.650         2.06
+SET       0.660         2.19
+SET       0.670         2.36
+SET       0.680         2.59
+SET       0.690         2.82
+SET       0.700         3.00
+SET       0.710         3.17
+SET       0.720         3.34
+SET       0.730         3.46
+SET       0.740         3.57
+SET       0.750         3.68
+SET       0.760         3.80
+SET       0.770         3.91
+SET       0.780         4.01
+SET       0.790         4.10
+SET       0.800         4.21
+SET       0.810         4.32
+SET       0.820         4.44
+SET       0.830         4.55
+SET       0.840         4.67
+SET       0.850         4.78
+SET       0.860         4.90
+SET       0.870         5.06
+SET       0.880         5.26
+SET       0.890         5.51
+SET       0.900         5.82
+SET       0.910         6.26
+SET       0.920         6.66
+SET       0.930         7.09
+SET       0.940         7.45
+SET       0.950         7.80
+SET       0.960         8.09
+SET       0.970         8.37
+SET       0.980         8.65
+SET       0.990         8.93
+SET       1.000        10.83
+SET       1.100        47.55
+SET       1.200        76.87
+SET       1.300        95.80
+SET       1.400        98.00
+SET       1.500        98.70
+SET       1.600        98.98
+SET       1.700        99.14
+SET       1.800        99.24
+SET       1.900        99.30
+SET       2.000        99.35
+SET       2.100        99.39
+SET       2.200        99.42
+SET       2.300        99.44
+SET       2.400        99.46
+SET       2.500        99.48
+SET       2.600        99.50
+SET       2.700        99.51
+SET       2.800        99.52
+SET       2.900        99.53
+SET       3.000        99.55
+SET       3.100        99.56
+SET       3.200        99.57
+SET       3.300        99.58
+SET       3.400        99.58
+SET       3.500        99.60
+SET       3.600        99.63
+SET       3.700        99.64
+SET       3.800        99.66
+SET       3.900        99.67
+SET       4.000        99.69
+SET       4.100        99.71
+SET       4.200        99.72
+SET       4.300        99.73
+SET       4.400        99.74
+SET       4.500        99.75
+SET       4.600        99.75
+SET       4.700        99.77
+SET       4.800        99.78
+SET       4.900        99.79
+SET       5.000        99.80
+SET       5.100        99.80
+SET       5.200        99.80
+SET       5.300        99.80
+SET       5.700        99.81
+SET       5.800        99.81
+SET       5.900        99.81
+SET       6.000        99.81
+SET       6.100        99.81
+SET       6.200        99.82
+SET       6.300        99.82
+SET       6.400        99.82
+SET       6.500        99.82
+SET       6.600        99.82
+SET       6.700        99.82
+SET       6.800        99.82
+SET       6.900        99.82
+SET       7.000        99.83
+SET       7.100        99.83
+SET       7.200        99.83
+SET       7.300        99.83
+SET       7.400        99.83
+SET       7.500        99.83
+SET       7.600        99.84
+SET       7.700        99.84
+SET       7.800        99.84
+SET       7.900        99.84
+SET       8.000        99.85
+SET       8.100        99.85
+SET       8.400        99.85
+SET       8.500        99.86
+SET       8.600        99.86
+SET       8.700        99.86
+SET       8.800        99.86
+SET       8.900        99.87
+SET       9.000        99.87
+SET       9.100        99.87
+SET       9.200        99.87
+SET       9.400        99.87
+SET       9.500        99.87
+SET       9.600        99.88
+SET       9.800        99.88
+SET       9.900        99.88
+SET      10.000        99.88
+SET      11.000        99.90
+SET      12.000        99.93
+SET      13.000        99.95
+SET      14.000        99.97
+SET      15.000        99.98
+SET      16.000        99.98
+SET      17.000        99.99
+SET      18.000       100.00
+SET      19.000       100.00
+---
+GET       0.031         0.00
+GET       0.034         0.00
+GET       0.035         0.00
+GET       0.037         0.00
+GET       0.038         0.00
+GET       0.040         0.00
+GET       0.041         0.00
+GET       0.045         0.00
+GET       0.047         0.00
+GET       0.054         0.00
+GET       0.060         0.00
+GET       0.062         0.00
+GET       0.063         0.00
+GET       0.064         0.00
+GET       0.065         0.00
+GET       0.070         0.00
+GET       0.074         0.00
+GET       0.079         0.00
+GET       0.080         0.00
+GET       0.081         0.00
+GET       0.082         0.00
+GET       0.083         0.00
+GET       0.086         0.00
+GET       0.087         0.00
+GET       0.088         0.00
+GET       0.089         0.00
+GET       0.090         0.00
+GET       0.091         0.00
+GET       0.093         0.00
+GET       0.096         0.00
+GET       0.097         0.00
+GET       0.100         0.00
+GET       0.110         0.00
+GET       0.120         0.00
+GET       0.130         0.01
+GET       0.140         0.01
+GET       0.150         0.01
+GET       0.160         0.01
+GET       0.170         0.01
+GET       0.180         0.03
+GET       0.190         0.04
+GET       0.200         0.07
+GET       0.210         0.08
+GET       0.220         0.09
+GET       0.230         0.10
+GET       0.240         0.11
+GET       0.250         0.12
+GET       0.260         0.13
+GET       0.270         0.14
+GET       0.280         0.14
+GET       0.290         0.15
+GET       0.300         0.17
+GET       0.310         0.18
+GET       0.320         0.20
+GET       0.330         0.21
+GET       0.340         0.22
+GET       0.350         0.23
+GET       0.360         0.24
+GET       0.370         0.25
+GET       0.380         0.28
+GET       0.390         0.34
+GET       0.400         0.38
+GET       0.410         0.42
+GET       0.420         0.45
+GET       0.430         0.48
+GET       0.440         0.50
+GET       0.450         0.53
+GET       0.460         0.57
+GET       0.470         0.60
+GET       0.480         0.64
+GET       0.490         0.68
+GET       0.500         0.73
+GET       0.510         0.78
+GET       0.520         0.85
+GET       0.530         0.92
+GET       0.540         0.99
+GET       0.550         1.08
+GET       0.560         1.17
+GET       0.570         1.28
+GET       0.580         1.39
+GET       0.590         1.49
+GET       0.600         1.59
+GET       0.610         1.68
+GET       0.620         1.77
+GET       0.630         1.86
+GET       0.640         1.96
+GET       0.650         2.08
+GET       0.660         2.21
+GET       0.670         2.39
+GET       0.680         2.59
+GET       0.690         2.81
+GET       0.700         3.01
+GET       0.710         3.18
+GET       0.720         3.32
+GET       0.730         3.45
+GET       0.740         3.56
+GET       0.750         3.67
+GET       0.760         3.77
+GET       0.770         3.87
+GET       0.780         3.97
+GET       0.790         4.08
+GET       0.800         4.18
+GET       0.810         4.29
+GET       0.820         4.40
+GET       0.830         4.51
+GET       0.840         4.62
+GET       0.850         4.74
+GET       0.860         4.88
+GET       0.870         5.05
+GET       0.880         5.27
+GET       0.890         5.56
+GET       0.900         5.94
+GET       0.910         6.36
+GET       0.920         6.79
+GET       0.930         7.21
+GET       0.940         7.58
+GET       0.950         7.91
+GET       0.960         8.20
+GET       0.970         8.48
+GET       0.980         8.76
+GET       0.990         9.05
+GET       1.000        11.03
+GET       1.100        49.90
+GET       1.200        77.46
+GET       1.300        95.96
+GET       1.400        98.12
+GET       1.500        98.81
+GET       1.600        99.07
+GET       1.700        99.21
+GET       1.800        99.29
+GET       1.900        99.36
+GET       2.000        99.41
+GET       2.100        99.44
+GET       2.200        99.47
+GET       2.300        99.49
+GET       2.400        99.51
+GET       2.500        99.53
+GET       2.600        99.55
+GET       2.700        99.56
+GET       2.800        99.57
+GET       2.900        99.59
+GET       3.000        99.60
+GET       3.100        99.61
+GET       3.200        99.62
+GET       3.300        99.63
+GET       3.400        99.64
+GET       3.500        99.65
+GET       3.600        99.65
+GET       3.700        99.66
+GET       3.800        99.68
+GET       3.900        99.70
+GET       4.000        99.72
+GET       4.100        99.73
+GET       4.200        99.74
+GET       4.300        99.75
+GET       4.400        99.75
+GET       4.500        99.76
+GET       4.600        99.77
+GET       4.700        99.78
+GET       4.800        99.79
+GET       4.900        99.80
+GET       5.000        99.81
+GET       5.100        99.81
+GET       5.200        99.81
+GET       5.300        99.82
+GET       5.400        99.82
+GET       5.500        99.82
+GET       5.600        99.82
+GET       5.700        99.82
+GET       5.800        99.82
+GET       5.900        99.82
+GET       6.000        99.83
+GET       6.100        99.83
+GET       6.200        99.83
+GET       6.300        99.83
+GET       6.400        99.84
+GET       6.500        99.84
+GET       6.600        99.84
+GET       6.700        99.84
+GET       6.800        99.84
+GET       6.900        99.84
+GET       7.000        99.85
+GET       7.100        99.85
+GET       7.200        99.85
+GET       7.300        99.85
+GET       7.400        99.85
+GET       7.500        99.85
+GET       7.600        99.85
+GET       7.700        99.86
+GET       7.800        99.86
+GET       7.900        99.86
+GET       8.000        99.86
+GET       8.100        99.87
+GET       8.200        99.87
+GET       8.300        99.87
+GET       8.400        99.87
+GET       8.500        99.87
+GET       8.600        99.88
+GET       8.700        99.88
+GET       8.800        99.88
+GET       8.900        99.88
+GET       9.000        99.88
+GET       9.100        99.88
+GET       9.200        99.89
+GET       9.300        99.89
+GET       9.400        99.89
+GET       9.500        99.89
+GET       9.600        99.89
+GET       9.700        99.89
+GET       9.800        99.89
+GET       9.900        99.89
+GET      10.000        99.90
+GET      11.000        99.91
+GET      12.000        99.94
+GET      13.000        99.96
+GET      14.000        99.97
+GET      15.000        99.99
+GET      16.000        99.99
+GET      17.000        99.99
+GET      18.000       100.00
+GET      19.000       100.00
+---
+cl-memcached-server
+nginx/nginx.sh
+[nginx] 
+[nginx] == nginx unit test ==
+sudo: swupd: command not found
+sudo: swupd: command not found
+[nginx] [INFO] Test docker hub official image first:
+[nginx] 
+5a706c30a22f6145dc55cf2f5670235228f025502978298bf789e898bacf4466
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        nginx/1.15.12
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        612 bytes
+
+Concurrency Level:      50
+Time taken for tests:   4.500 seconds
+Complete requests:      100000
+Failed requests:        0
+Keep-Alive requests:    99024
+Total transferred:      85095120 bytes
+HTML transferred:       61200000 bytes
+Requests per second:    22223.70 [#/sec] (mean)
+Time per request:       2.250 [ms] (mean)
+Time per request:       0.045 [ms] (mean, across all concurrent requests)
+Transfer rate:          18468.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       5
+Processing:     0    2   0.7      2      55
+Waiting:        0    2   0.7      2      55
+Total:          0    2   0.8      2      56
+
+Percentage of the requests served within a certain time (ms)
+  50%      2
+  66%      2
+  75%      2
+  80%      2
+  90%      2
+  95%      3
+  98%      3
+  99%      4
+ 100%     56 (longest request)
+nginx-server
+[nginx] [INFO] Test clear docker image:
+[nginx] 
+1b877a234ebdd787f7b2cb065ab677a748e20b392417cd3942838331fe046174
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        nginx/1.14.2
+Server Hostname:        localhost
+Server Port:            8088
+
+Document Path:          /
+Document Length:        794 bytes
+
+Concurrency Level:      50
+Time taken for tests:   1.627 seconds
+Complete requests:      100000
+Failed requests:        0
+Keep-Alive requests:    99023
+Total transferred:      103195115 bytes
+HTML transferred:       79400000 bytes
+Requests per second:    61480.12 [#/sec] (mean)
+Time per request:       0.813 [ms] (mean)
+Time per request:       0.016 [ms] (mean, across all concurrent requests)
+Transfer rate:          61957.50 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       3
+Processing:     0    1   0.8      1      35
+Waiting:        0    1   0.8      1      35
+Total:          0    1   0.8      1      37
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      1
+  80%      1
+  90%      1
+  95%      1
+  98%      2
+  99%      4
+ 100%     37 (longest request)
+clr-nginx-server
+redis/redis.sh
+[redis] 
+[redis] == redis unit test ==
+9e605077207c        redis-network       bridge              local
+[redis] [INFO] Test docker hub official image first:
+[redis] 
+4b6e6d8a01f1845c7f58d794315a1d5796aa38d18de65234c9a2e6e9c164f6ed
+PING_INLINE: 0.00PING_INLINE: 92135.46PING_INLINE: 93229.55PING_INLINE: 93406.12PING_INLINE: 93554.44====== PING_INLINE ======
+  100000 requests completed in 1.07 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93545.37 requests per second
+
+PING_BULK: 91402.44PING_BULK: 90944.45PING_BULK: 90993.98PING_BULK: 91298.69====== PING_BULK ======
+  100000 requests completed in 1.09 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+91575.09 requests per second
+
+SET: 89648.15SET: 93930.92SET: 94126.35SET: 94268.66SET: 94322.58====== SET ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+94339.62 requests per second
+
+GET: 94482.30GET: 93936.97GET: 94141.88GET: 93917.01====== GET ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93984.96 requests per second
+
+INCR: 93583.34INCR: 94606.60INCR: 94694.10INCR: 94494.41====== INCR ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+94250.71 requests per second
+
+LPUSH: 94833.34LPUSH: 95759.49LPUSH: 96116.61LPUSH: 96068.63====== LPUSH ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+96339.12 requests per second
+
+RPUSH: 90300.00RPUSH: 96365.39RPUSH: 96311.77RPUSH: 96019.73RPUSH: 95998.02====== RPUSH ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+95969.28 requests per second
+
+LPOP: 95104.48LPOP: 95656.32LPOP: 95647.65LPOP: 95695.06====== LPOP ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+95693.78 requests per second
+
+RPOP: 94906.48RPOP: 95197.95RPOP: 94680.75RPOP: 94276.72====== RPOP ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+94339.62 requests per second
+
+SADD: 90629.03SADD: 94246.79SADD: 94083.63SADD: 94396.55====== SADD ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+94696.97 requests per second
+
+HSET: 0.00HSET: 96382.48HSET: 96265.47HSET: 96049.27HSET: 96011.98====== HSET ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+96061.48 requests per second
+
+SPOP: 93507.77SPOP: 93557.56SPOP: 93906.20SPOP: 93875.93====== SPOP ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93984.96 requests per second
+
+LPUSH (needed to benchmark LRANGE): 95945.95LPUSH (needed to benchmark LRANGE): 96221.61LPUSH (needed to benchmark LRANGE): 96302.78LPUSH (needed to benchmark LRANGE): 96320.55====== LPUSH (needed to benchmark LRANGE) ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+96432.02 requests per second
+
+LRANGE_100 (first 100 elements): 49178.57LRANGE_100 (first 100 elements): 48388.89LRANGE_100 (first 100 elements): 48356.12LRANGE_100 (first 100 elements): 48372.21LRANGE_100 (first 100 elements): 48456.44LRANGE_100 (first 100 elements): 48146.25LRANGE_100 (first 100 elements): 47791.77LRANGE_100 (first 100 elements): 47828.90LRANGE_100 (first 100 elements): 48000.97====== LRANGE_100 (first 100 elements) ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.99% <= 1 milliseconds
+100.00% <= 1 milliseconds
+48007.68 requests per second
+
+LRANGE_300 (first 300 elements): 20840.58LRANGE_300 (first 300 elements): 20458.52LRANGE_300 (first 300 elements): 20432.20LRANGE_300 (first 300 elements): 20450.94LRANGE_300 (first 300 elements): 20416.39LRANGE_300 (first 300 elements): 20441.02LRANGE_300 (first 300 elements): 20386.42LRANGE_300 (first 300 elements): 20412.16LRANGE_300 (first 300 elements): 20389.04LRANGE_300 (first 300 elements): 20394.22LRANGE_300 (first 300 elements): 20368.54LRANGE_300 (first 300 elements): 20345.17LRANGE_300 (first 300 elements): 20326.89LRANGE_300 (first 300 elements): 20302.98LRANGE_300 (first 300 elements): 20309.52LRANGE_300 (first 300 elements): 20314.98LRANGE_300 (first 300 elements): 20322.17LRANGE_300 (first 300 elements): 20321.37LRANGE_300 (first 300 elements): 20311.53====== LRANGE_300 (first 300 elements) ======
+  100000 requests completed in 4.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.18% <= 1 milliseconds
+99.91% <= 2 milliseconds
+100.00% <= 2 milliseconds
+20304.57 requests per second
+
+LRANGE_500 (first 450 elements): 15888.89LRANGE_500 (first 450 elements): 15451.49LRANGE_500 (first 450 elements): 15217.73LRANGE_500 (first 450 elements): 15221.07LRANGE_500 (first 450 elements): 15168.63LRANGE_500 (first 450 elements): 15148.70LRANGE_500 (first 450 elements): 15158.45LRANGE_500 (first 450 elements): 14977.98LRANGE_500 (first 450 elements): 15008.41LRANGE_500 (first 450 elements): 15030.38LRANGE_500 (first 450 elements): 15033.31LRANGE_500 (first 450 elements): 15032.83LRANGE_500 (first 450 elements): 15041.02LRANGE_500 (first 450 elements): 15043.39LRANGE_500 (first 450 elements): 15049.11LRANGE_500 (first 450 elements): 15054.60LRANGE_500 (first 450 elements): 15056.18LRANGE_500 (first 450 elements): 15028.79LRANGE_500 (first 450 elements): 14879.95LRANGE_500 (first 450 elements): 14888.96LRANGE_500 (first 450 elements): 14906.65LRANGE_500 (first 450 elements): 14910.33LRANGE_500 (first 450 elements): 14921.09LRANGE_500 (first 450 elements): 14930.56LRANGE_500 (first 450 elements): 14932.45LRANGE_500 (first 450 elements): 14940.08LRANGE_500 (first 450 elements): 14946.05====== LRANGE_500 (first 450 elements) ======
+  100000 requests completed in 6.69 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 1 milliseconds
+97.32% <= 2 milliseconds
+99.99% <= 3 milliseconds
+100.00% <= 3 milliseconds
+14949.92 requests per second
+
+LRANGE_600 (first 600 elements): 12514.29LRANGE_600 (first 600 elements): 12334.38LRANGE_600 (first 600 elements): 12263.16LRANGE_600 (first 600 elements): 12257.00LRANGE_600 (first 600 elements): 12249.07LRANGE_600 (first 600 elements): 12060.47LRANGE_600 (first 600 elements): 12068.02LRANGE_600 (first 600 elements): 12067.43LRANGE_600 (first 600 elements): 12073.77LRANGE_600 (first 600 elements): 12096.34LRANGE_600 (first 600 elements): 12086.96LRANGE_600 (first 600 elements): 12091.65LRANGE_600 (first 600 elements): 12095.58LRANGE_600 (first 600 elements): 12094.08LRANGE_600 (first 600 elements): 12095.33LRANGE_600 (first 600 elements): 12051.22LRANGE_600 (first 600 elements): 12054.94LRANGE_600 (first 600 elements): 12063.32LRANGE_600 (first 600 elements): 12068.59LRANGE_600 (first 600 elements): 12073.31LRANGE_600 (first 600 elements): 12075.61LRANGE_600 (first 600 elements): 12086.70LRANGE_600 (first 600 elements): 12088.73LRANGE_600 (first 600 elements): 12089.21LRANGE_600 (first 600 elements): 12083.88LRANGE_600 (first 600 elements): 12089.73LRANGE_600 (first 600 elements): 12084.64LRANGE_600 (first 600 elements): 12086.08LRANGE_600 (first 600 elements): 12088.82LRANGE_600 (first 600 elements): 12093.15LRANGE_600 (first 600 elements): 12094.43LRANGE_600 (first 600 elements): 12088.61LRANGE_600 (first 600 elements): 12090.19====== LRANGE_600 (first 600 elements) ======
+  100000 requests completed in 8.27 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 1 milliseconds
+38.22% <= 2 milliseconds
+99.49% <= 3 milliseconds
+99.99% <= 4 milliseconds
+100.00% <= 4 milliseconds
+12091.90 requests per second
+
+MSET (10 keys): 95977.77MSET (10 keys): 95044.07MSET (10 keys): 95660.55MSET (10 keys): 95869.18====== MSET (10 keys) ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.98% <= 1 milliseconds
+100.00% <= 1 milliseconds
+96153.85 requests per second
+
+
+some-redis
+[redis] [INFO] Test clear docker image:
+[redis] 
+cc593e11f9379098c071f1df9882b8f327b571bb5ecbe1edfcd7bb696e42f633
+PING_INLINE: -nanPING_INLINE: 93672.00PING_INLINE: 94030.00PING_INLINE: 94282.66PING_INLINE: 94008.00====== PING_INLINE ======
+  100000 requests completed in 1.06 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93984.96 requests per second
+
+PING_BULK: 91569.70PING_BULK: 91665.06PING_BULK: 92172.93PING_BULK: 92015.30====== PING_BULK ======
+  100000 requests completed in 1.08 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+92250.92 requests per second
+
+SET: 90868.85SET: 94424.44SET: 94442.07SET: 94403.21SET: 93376.06====== SET ======
+  100000 requests completed in 1.07 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93283.58 requests per second
+
+GET: 92904.11GET: 92729.21GET: 93169.68GET: 93465.43====== GET ======
+  100000 requests completed in 1.07 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93545.37 requests per second
+
+INCR: 94282.45INCR: 94884.51INCR: 94619.66INCR: 95063.56====== INCR ======
+  100000 requests completed in 1.05 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+95057.03 requests per second
+
+LPUSH: 94101.70LPUSH: 96035.60LPUSH: 95889.09LPUSH: 96060.57====== LPUSH ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+96153.85 requests per second
+
+RPUSH: -nanRPUSH: 96088.00RPUSH: 95654.00RPUSH: 95706.66RPUSH: 95945.00====== RPUSH ======
+  100000 requests completed in 1.04 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+95969.28 requests per second
+
+LPOP: 95877.66LPOP: 95662.10LPOP: 94183.13LPOP: 93750.53====== LPOP ======
+  100000 requests completed in 1.07 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93720.71 requests per second
+
+RPOP: 90158.41RPOP: 89444.45RPOP: 89039.93RPOP: 89392.48RPOP: 89188.92====== RPOP ======
+  100000 requests completed in 1.12 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+89285.71 requests per second
+
+SADD: 87685.72SADD: 88195.65SADD: 89159.16SADD: 89129.17====== SADD ======
+  100000 requests completed in 1.12 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+89605.73 requests per second
+
+HSET: 86797.30HSET: 90953.70HSET: 92149.83HSET: 92396.84HSET: 92206.70====== HSET ======
+  100000 requests completed in 1.08 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+92250.92 requests per second
+
+SPOP: 90899.55SPOP: 90360.34SPOP: 90734.36SPOP: 90787.41====== SPOP ======
+  100000 requests completed in 1.10 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+90991.81 requests per second
+
+LPUSH (needed to benchmark LRANGE): 82940.00LPUSH (needed to benchmark LRANGE): 90902.86LPUSH (needed to benchmark LRANGE): 92211.66LPUSH (needed to benchmark LRANGE): 92678.82====== LPUSH (needed to benchmark LRANGE) ======
+  100000 requests completed in 1.07 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+93196.65 requests per second
+
+LRANGE_100 (first 100 elements): 40571.43LRANGE_100 (first 100 elements): 47431.91LRANGE_100 (first 100 elements): 47185.40LRANGE_100 (first 100 elements): 47092.47LRANGE_100 (first 100 elements): 46417.08LRANGE_100 (first 100 elements): 46494.83LRANGE_100 (first 100 elements): 46495.69LRANGE_100 (first 100 elements): 46323.85LRANGE_100 (first 100 elements): 46485.80====== LRANGE_100 (first 100 elements) ======
+  100000 requests completed in 2.15 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+98.92% <= 1 milliseconds
+100.00% <= 1 milliseconds
+46468.40 requests per second
+
+LRANGE_300 (first 300 elements): 20870.59LRANGE_300 (first 300 elements): 19776.12LRANGE_300 (first 300 elements): 19533.33LRANGE_300 (first 300 elements): 19443.12LRANGE_300 (first 300 elements): 19349.31LRANGE_300 (first 300 elements): 19419.47LRANGE_300 (first 300 elements): 19486.44LRANGE_300 (first 300 elements): 19532.42LRANGE_300 (first 300 elements): 19445.08LRANGE_300 (first 300 elements): 19504.50LRANGE_300 (first 300 elements): 19514.51LRANGE_300 (first 300 elements): 19578.84LRANGE_300 (first 300 elements): 19630.15LRANGE_300 (first 300 elements): 19643.29LRANGE_300 (first 300 elements): 19646.96LRANGE_300 (first 300 elements): 19653.54LRANGE_300 (first 300 elements): 19666.91LRANGE_300 (first 300 elements): 19631.31LRANGE_300 (first 300 elements): 19634.40LRANGE_300 (first 300 elements): 19647.51LRANGE_300 (first 300 elements): 19627.09====== LRANGE_300 (first 300 elements) ======
+  100000 requests completed in 5.09 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.25% <= 1 milliseconds
+99.27% <= 2 milliseconds
+99.98% <= 3 milliseconds
+100.00% <= 3 milliseconds
+19627.09 requests per second
+
+LRANGE_500 (first 450 elements): 15247.75LRANGE_500 (first 450 elements): 14625.79LRANGE_500 (first 450 elements): 14573.21LRANGE_500 (first 450 elements): 14674.87LRANGE_500 (first 450 elements): 14732.24LRANGE_500 (first 450 elements): 14708.47LRANGE_500 (first 450 elements): 14691.59LRANGE_500 (first 450 elements): 14671.39LRANGE_500 (first 450 elements): 14420.93LRANGE_500 (first 450 elements): 14277.46LRANGE_500 (first 450 elements): 14114.04LRANGE_500 (first 450 elements): 14031.24LRANGE_500 (first 450 elements): 13934.63LRANGE_500 (first 450 elements): 13873.20LRANGE_500 (first 450 elements): 13784.39LRANGE_500 (first 450 elements): 13754.77LRANGE_500 (first 450 elements): 13733.87LRANGE_500 (first 450 elements): 13715.53LRANGE_500 (first 450 elements): 13592.86LRANGE_500 (first 450 elements): 13595.22LRANGE_500 (first 450 elements): 13582.46LRANGE_500 (first 450 elements): 13558.53LRANGE_500 (first 450 elements): 13475.68LRANGE_500 (first 450 elements): 13455.15LRANGE_500 (first 450 elements): 13438.76LRANGE_500 (first 450 elements): 13428.02LRANGE_500 (first 450 elements): 13416.83LRANGE_500 (first 450 elements): 13402.72LRANGE_500 (first 450 elements): 13374.17====== LRANGE_500 (first 450 elements) ======
+  100000 requests completed in 7.48 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.03% <= 1 milliseconds
+67.88% <= 2 milliseconds
+98.67% <= 3 milliseconds
+99.72% <= 4 milliseconds
+99.98% <= 5 milliseconds
+100.00% <= 5 milliseconds
+13367.20 requests per second
+
+LRANGE_600 (first 600 elements): 0.00LRANGE_600 (first 600 elements): 10666.67LRANGE_600 (first 600 elements): 10513.89LRANGE_600 (first 600 elements): 11013.25LRANGE_600 (first 600 elements): 11256.46LRANGE_600 (first 600 elements): 11446.66LRANGE_600 (first 600 elements): 11542.80LRANGE_600 (first 600 elements): 11644.48LRANGE_600 (first 600 elements): 11672.97LRANGE_600 (first 600 elements): 11738.05LRANGE_600 (first 600 elements): 11789.73LRANGE_600 (first 600 elements): 11830.50LRANGE_600 (first 600 elements): 11852.26LRANGE_600 (first 600 elements): 11877.41LRANGE_600 (first 600 elements): 11896.38LRANGE_600 (first 600 elements): 11916.05LRANGE_600 (first 600 elements): 11918.04LRANGE_600 (first 600 elements): 11899.65LRANGE_600 (first 600 elements): 11917.83LRANGE_600 (first 600 elements): 11934.54LRANGE_600 (first 600 elements): 11947.78LRANGE_600 (first 600 elements): 11962.99LRANGE_600 (first 600 elements): 11967.93LRANGE_600 (first 600 elements): 11976.43LRANGE_600 (first 600 elements): 11972.93LRANGE_600 (first 600 elements): 11978.47LRANGE_600 (first 600 elements): 11986.81LRANGE_600 (first 600 elements): 11989.96LRANGE_600 (first 600 elements): 11994.30LRANGE_600 (first 600 elements): 12000.28LRANGE_600 (first 600 elements): 11985.65LRANGE_600 (first 600 elements): 11988.68LRANGE_600 (first 600 elements): 11991.90LRANGE_600 (first 600 elements): 11991.06====== LRANGE_600 (first 600 elements) ======
+  100000 requests completed in 8.34 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.00% <= 1 milliseconds
+36.56% <= 2 milliseconds
+98.94% <= 3 milliseconds
+99.93% <= 4 milliseconds
+99.97% <= 5 milliseconds
+100.00% <= 5 milliseconds
+11993.28 requests per second
+
+MSET (10 keys): 95827.38MSET (10 keys): 92011.96MSET (10 keys): 90020.96MSET (10 keys): 89192.81====== MSET (10 keys) ======
+  100000 requests completed in 1.13 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.94% <= 1 milliseconds
+100.00% <= 1 milliseconds
+88731.15 requests per second
+
+
+clr-redis
