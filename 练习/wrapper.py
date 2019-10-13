@@ -93,27 +93,64 @@
 # func2(111)
 
 
+# """
+# 装饰器传参，(有三层)
+# url:https://www.bilibili.com/video/av47451456/?p=42
+# 装饰器：P42
+# """
+#
+#
+# def wrapper(count):
+#     def deco(f):
+#         def inner(*args, **kwargs):
+#             for i in range(count):
+#                 f(*args, **kwargs)
+#
+#         return inner
+#
+#     return deco
+#
+#
+# @wrapper(5)
+# def func():
+#     print('sunck is a good man')
+#
+#
+# func()
+
+
+# """
+# 装饰器：重试(retry)
+# """
+#
+#
+# def retry(count=3, wait=0, exceptions=(Exception,)):
+#     import time
+#
+#     def wrapper(f):
+#         def inner(*args, **kwargs):
+#             for i in range(count):
+#                 try:
+#                     res = f(*args, **kwargs)
+#
+#                 except exceptions as e:
+#                     time.sleep(wait)
+#                     continue
+#                 else:
+#                     return res
+#
+#         return inner
+#
+#     return wrapper
+
+# 函数实现生成器
 """
-装饰器传参，(有三层)
-url:https://www.bilibili.com/video/av47451456/?p=42
-装饰器：P42
+如果说推导的算法比较复杂，用列表生成式或for循环无法实现的时候可以选择使用函数生成器；
+(yield)
+
+如果想让一个函数变为生成器函数，只需将函数的return改为yield.
+
+变成generator函数，在每次调用next()的时候，遇到yield语句返回，如果再次执行next(),
+会从上次返回的yield语句处继续执行
 """
 
-
-def wrapper(count):
-    def deco(f):
-        def inner(*args, **kwargs):
-            for i in range(count):
-                f(*args, **kwargs)
-
-        return inner
-
-    return deco
-
-
-@wrapper(5)
-def func():
-    print('sunck is a good man')
-
-
-func()
