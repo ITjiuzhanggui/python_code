@@ -37,6 +37,7 @@
 # say = wrapper(say) # 有了@之后就不写这句话了
 # print(say('sunck', -18))
 
+
 """
  python 2.4之后 支持使用@将装饰器应用在函数上，只需要再函数定义前加上@装饰器的名称即可
 """
@@ -154,28 +155,29 @@
 会从上次返回的yield语句处继续执行
 """
 
+# # 生成器(斐波那契数列)
+# def fib(count):
+#     index = 0
+#     x, y = 0, 1
+#     while index < count:
+#         yield y
+#         x, y = y, x + y
+#         index += 1
+#     return 'sunck is a good man'
+#
+#
+# g = fib(6)
+# # for循环遍历generator时，拿不到generator的return的返回值；
+# # 如果想拿返回值，必须捕获StopIteration错误,返回值包含在错误对象的value属性
+# # 中
+# # for i in g:
+# #     print(i)
+# while 1:
+#     try:
+#         ret = next(g)
+#         print(ret)
+#     except StopIteration as e:
+#         print('返回值：', e.value)
+#         break
 
-# 生成器(斐波那契数列)
-def fib(count):
-    index = 0
-    x, y = 0, 1
-    while index < count:
-        yield y
-        x, y = y, x + y
-        index += 1
-    return 'sunck is a good man'
 
-
-g = fib(6)
-# for循环遍历generator时，拿不到generator的return的返回值；
-# 如果想拿返回值，必须捕获StopIteration错误,返回值包含在错误对象的value属性
-# 中
-# for i in g:
-#     print(i)
-while 1:
-    try:
-        ret = next(g)
-        print(ret)
-    except StopIteration as e:
-        print('返回值：', e.value)
-        break
