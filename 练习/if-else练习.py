@@ -378,27 +378,63 @@ python中"一切皆对象"所有的赋值操作都是"引用的赋值"，所以�
 # func2(111)
 
 
-"""
-装饰器传参，(有三层)
-url:https://www.bilibili.com/video/av47451456/?p=42
-装饰器：P42
-"""
+# """
+# 装饰器传参，(有三层)
+# url:https://www.bilibili.com/video/av47451456/?p=42
+# 装饰器：P42
+# """
+#
+#
+# def wrapper(count):
+#     def deco(f):
+#         def inner(*args, **kwargs):
+#             for i in range(count):
+#                 f(*args, **kwargs)
+#
+#         return inner
+#
+#     return deco
+#
+#
+# @wrapper(5)
+# def func():
+#     print('sunck is a good man')
+#
+#
+# func()
 
+# 函数实现生成器
+# """
+# 如果说推导的算法比较复杂，用列表生成式或for循环无法实现的时候可以选择使用函数生成器；
+# (yield)
+#
+# 如果想让一个函数变为生成器函数，只需将函数的return改为yield.
+#
+# 变成generator函数，在每次调用next()的时候，遇到yield语句返回，如果再次执行next(),
+# 会从上次返回的yield语句处继续执行
+# """
 
-def wrapper(count):
-    def deco(f):
-        def inner(*args, **kwargs):
-            for i in range(count):
-                f(*args, **kwargs)
-
-        return inner
-
-    return deco
-
-
-@wrapper(5)
-def func():
-    print('sunck is a good man')
-
-
-func()
+# # 生成器(斐波那契数列)
+# def fib(count):
+#     index = 0
+#     x, y = 0, 1
+#     while index < count:
+#         yield y
+#         x, y = y, x + y
+#         index += 1
+#     return 'sunck is a good man'
+#
+#
+# g = fib(6)
+# # for循环遍历generator时，拿不到generator的return的返回值；
+# # 如果想拿返回值，必须捕获StopIteration错误,返回值包含在错误对象的value属性
+# # 中
+# # for i in g:
+# #     print(i)
+# while 1:
+#     try:
+#         ret = next(g)
+#         print(ret)
+#     except StopIteration as e:
+#         print('返回值：', e.value)
+#         break
