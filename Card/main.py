@@ -33,7 +33,19 @@ def main():
         atmMachine.atmInitView()
         # 接受操作
         optionStr = input("请输入操作:")
+        # 操作匹配
+        if optionStr == '11':
+            pass
 
+        elif optionStr == '22':
+            # 应该是将数据持久化存储
+            break
+
+        elif optionStr == '33':
+            pass
+
+        elif optionStr == '44':
+            pass
 
 
 if __name__ == '__main__':

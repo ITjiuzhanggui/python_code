@@ -32,3 +32,8 @@ class ATM(object):
         print("             退卡(9)               ")
         print("==================================")
 
+        # 提额
+        def addMoney(self, money):
+            self.money += money
+            if not self.isActive:
+                self.isActive = True
