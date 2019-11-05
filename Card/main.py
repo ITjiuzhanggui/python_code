@@ -79,7 +79,7 @@ def welcome():
 
         elif optionStr == '222':
             """开户"""
-            pass
+            atmMachine.createCard()
 
         elif optionStr == '333':
             """补卡"""

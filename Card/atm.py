@@ -95,9 +95,9 @@ class ATM(object):
         user = bankSys.usersDict.get(idCard)
         if not user:
             # 用户不存在，需要创建用户
-            accunt = input("请输入姓名：")
+            name = input("请输入姓名：")
             phone = input("请输入手机号：")
-            user = User(accunt, idCard, phone)
+            user = User(name, idCard, phone)
             # 存入系统
             bankSys.usersDict[idCard] = user
 
