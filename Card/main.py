@@ -17,14 +17,17 @@
 行为：
 
 """
-from atm import ATM
-from bank import Bank
-from card import Card
-from user import User
+import time
+
+from Card.atm import ATM
+from Card.bank import Bank
+from Card.card import Card
+from Card.user import User
 
 # 创建银行对象
 BANK = Bank()
 atmMachine = ATM()
+atmMachine.money = 10000
 
 
 def main():
@@ -33,19 +36,61 @@ def main():
         atmMachine.atmInitView()
         # 接受操作
         optionStr = input("请输入操作:")
+
         # 操作匹配
         if optionStr == '11':
-            pass
+            """登陆"""
+            res = atmMachine.checkPasswd()
+            if not res:
+                """循环进入欢迎界面"""
+                time.sleep(2)
+                welcome()
 
         elif optionStr == '22':
-            # 应该是将数据持久化存储
+            """关机"""
+            atmMachine.shutDown()
             break
 
         elif optionStr == '33':
-            pass
+            """提额"""
+            atmMachine.addMoney()
 
         elif optionStr == '44':
+            """改密"""
+            atmMachine.changeAtmPasswd()
+
+        time.sleep(2)
+
+
+def welcome():
+    while True:
+        atmMachine.welcomeView()
+        # 等待操作
+        optionStr = input("请输入操作:")
+
+        # 操作匹配
+        if optionStr == '111':
+            """插卡"""
+            res = atmMachine.checkPasswd()
+            if not res:
+                """循环进入欢迎界面"""
+                time.sleep(2)
+                welcome()
+
+        elif optionStr == '222':
+            """开户"""
             pass
+
+        elif optionStr == '333':
+            """补卡"""
+            pass
+
+        elif optionStr == '444':
+            """返回"""
+            print("返回开机界面")
+            break
+
+        time.sleep(2)
 
 
 if __name__ == '__main__':

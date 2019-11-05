@@ -1,6 +1,6 @@
 class User(object):
-    def __init__(self, name, cardID, phone):
+    def __init__(self, name, idCard, phone):
         self.name = name
-        self.cardId = cardID
+        self.idCard = idCard
         self.phone = phone
         self.cardsDict = {}
