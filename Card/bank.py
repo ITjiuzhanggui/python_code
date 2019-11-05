@@ -1,4 +1,4 @@
-from singleton import singletonFuncDeco
+from Card.singleton import singletonFuncDeco
 
 
 @singletonFuncDeco

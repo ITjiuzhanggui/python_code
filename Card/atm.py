@@ -1,5 +1,8 @@
 import time
 from Card.bank import Bank
+from Card.user import User
+from Card.card import Card
+import random
 
 
 class ATM(object):
@@ -88,3 +91,45 @@ class ATM(object):
         """开户"""
         idCard = input("请输入您的身份证号:")
         # 验证是否存在该用户
+        bankSys = Bank()
+        user = bankSys.usersDict.get(idCard)
+        if not user:
+            # 用户不存在，需要创建用户
+            accunt = input("请输入姓名：")
+            phone = input("请输入手机号：")
+            user = User(accunt, idCard, phone)
+            # 存入系统
+            bankSys.usersDict[idCard] = user
+
+        # 开卡
+        # 设置密码
+        passwd1 = input("请设置密码：")
+        # 验证密码
+        if self.inputPasswd(passwd1):
+            # 验证密码错误，开卡失败
+            print("三次验证密码错误，开卡失败")
+            return 1
+            money = input("输入预存款：")
+            cardId = self.getCardId()
+            card = Card(cardId, passwd1, money)
+            user.cardsDict[cardId] = card
+            print("开卡成功！请牢记卡号:%s" % (cardId))
+
+    def inputPasswd(self, realPasswd):
+        """输入密码，并与真实密码进行比对，比对成功返回0，否侧返回1"""
+        for i in range(3):
+            passwd = input("请输入密码：")
+            if passwd == realPasswd:
+                # 验证成功
+                return 0
+
+        # 对比不成功
+        return 1
+
+    def getCardId(self):
+        """随机生成卡号"""
+        arr = "0123456789"
+        cardId = ""
+        for i in range(6):
+            cardId += random.choice(arr)
+        return cardId
