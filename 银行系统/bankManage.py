@@ -23,5 +23,61 @@ import time, os
 from .admin import Admin
 import functions
 
+
 # users = {}
 def run():
+    admin = functions.adminInit()
+    users = functions.userInit()
+    # print(users)
+
+    if admin.adminView():
+        functions.adminClose(admin)
+        functions.userClose(users)
+    return -1
+
+    while True:
+        admin.adminAction()
+        value = input("请选择你要办理的业务:")
+
+        if option == '1':
+            pass
+
+        elif option == '2':
+            pass
+
+        elif option == '3':
+            pass
+
+        elif option == '4':
+            pass
+
+        elif option == '5':
+            pass
+
+        elif option == '6':
+            pass
+
+        elif option == '7':
+            pass
+
+        elif option == '8':
+            pass
+
+        elif option == '9':
+            pass
+
+        elif option == '0':
+            pass
+
+        elif option == 'q':
+            pass
+
+        elif option == 'm':
+            pass
+
+        else:
+            print("Fuck,你输入的根本理解不了，重新输入吧！")
+
+
+if __name__ == '__main__':
+    run()
