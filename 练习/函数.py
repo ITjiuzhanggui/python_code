@@ -115,7 +115,7 @@ def build_person(first_name, last_name, age=''):
 
 
 musician = build_person('jimi', 'hendrix', age=27)
-print(musician)
+# print(musician)
 
 """
 8.3.4  结合使用函数和while循环
@@ -135,6 +135,55 @@ def get_formatted_name(first_name, last_name):
 #     l_name = input("last name: ")
 #     formatted_name = get_formatted_name(f_name, l_name)
 #     print('\nHello ' + formatted_name + '!')
+
+# while True:
+#     print('\nPlease tell me your name: ')
+#     print("enter 'q' at any time to quit:")
+#     f_name = input('First name: ')
+#     if f_name == 'q':
+#         break
+#
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print('\nHello ' + formatted_name + '!')
+
+"""
+8.4  传递列表
+"""
+
+
+def greet_users(names):
+    """向列表中的每位用户都发出简单的问候"""
+    for name in names:
+        msg = "Hello, " + name.title() + "!"
+        print(msg)
+
+
+usernames = ['hannah', 'ty', 'margot']
+# greet_users(usernames)
+
+"""
+8.4.1  在函数中修改列表
+"""
+# 首先创建一个列表，其中包含一些要打印的设计
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+# 模拟打印每个设计，直到没有未打印的设计为止
+# 打印每个设计后，都将其移到列表completed_models中
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+
+    # 模拟根据设计制作3D打印模型的过程
+    print("\nPrinting model: " + current_design)
+    completed_models.append(current_design)
+
+# 显示打印好的所有模型
+print("\nThe following models have been printed: ")
+for completed_model in completed_models:
+    print(completed_model)
+
 
 """
 8.5.1  结合使用位置实参和任意数量实参

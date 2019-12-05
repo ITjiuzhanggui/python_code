@@ -20,23 +20,14 @@
 方法：
 """
 import time, os
-from .admin import Admin
-import functions
 
 
 # users = {}
 def run():
-    admin = functions.adminInit()
-    users = functions.userInit()
+    pass
     # print(users)
 
-    if admin.adminView():
-        functions.adminClose(admin)
-        functions.userClose(users)
-    return -1
-
     while True:
-        admin.adminAction()
         value = input("请选择你要办理的业务:")
 
         if option == '1':
