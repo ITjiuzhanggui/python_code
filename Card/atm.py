@@ -143,7 +143,7 @@ class ATM(object):
         if card.isLock:
             print("该卡已被锁定，请解锁后继续其它操作！")
         else:
-            print("卡号%s  余额%.2f" % (card.cardId, card.money))
+            print("卡号%s  余额%.2f" % (card.cardId , card.money))
 
     def deposit(self, card):
         """存款"""
