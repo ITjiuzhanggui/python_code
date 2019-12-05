@@ -38,6 +38,21 @@ class Admin():
                 ************************************************************
         """)
 
+    def checkAdminPasswd(self):
+        n = 0
+        while n <= 3:
+            if n == 3:
+                self.status = True
+                print("输入超过3次，管理员被锁定，请联系大神张鑫慧")
+                return -1
+                passwd = input("请输入密码:")
+                if passwd != self.__passwd:
+                    print("密码输入错误，请重新输入")
+                n += 1
+            else:
+                print("密码验证成功，请稍后")
+                time.sleep(2)
+                return 0
+
 
 if __name__ == '__main__':
-
