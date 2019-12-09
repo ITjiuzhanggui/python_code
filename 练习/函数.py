@@ -172,35 +172,87 @@ unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 # 模拟打印每个设计，直到没有未打印的设计为止
 # 打印每个设计后，都将其移到列表completed_models中
-while unprinted_designs:
-    current_design = unprinted_designs.pop()
+# while unprinted_designs:
+#     current_design = unprinted_designs.pop()
+#
+#     # 模拟根据设计制作3D打印模型的过程
+#     print("\nPrinting model: " + current_design)
+#     completed_models.append(current_design)
+#
+# # 显示打印好的所有模型
+# print("\nThe following models have been printed: ")
+# for completed_model in completed_models:
+#     print(completed_model)
 
-    # 模拟根据设计制作3D打印模型的过程
-    print("\nPrinting model: " + current_design)
-    completed_models.append(current_design)
+"""
+为重新组织这些代码，我们编写俩个函数，每个都做一件具体的工作
+"""
 
-# 显示打印好的所有模型
-print("\nThe following models have been printed: ")
-for completed_model in completed_models:
-    print(completed_model)
 
+def print_models(unprinted_designs, completed_models):
+    """
+    模拟打印每个设计，直到没有未打印的设计为止
+    打印每个设计后，都将其移到列表completed_models中
+    :param unprinted_designs:
+    :param completed_models:
+    :return:
+    """
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # 模拟根据设计制作3D打印模型的过程
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+
+def show_completed_models(completed_models):
+    """
+    显示打印好的所有模型
+    :param completed_models:
+    :return:
+    """
+    print("\nThe following models have been printed: ")
+    for completed_model in completed_models:
+        print(completed_model)
+
+
+# print_models(unprinted_designs, completed_models)
+# show_completed_models(completed_models)
+"""
+传递任意数量的实参
+有时候你预先不知道函数需要接受多少个实参，好在python允许函数从调用语句中收集
+"""
+
+
+def make_pizza(*toppings):
+    """
+    打印顾客点的所有配料
+    :param toppings:
+    :return:
+    """
+    print(toppings)
+
+
+# make_pizza('pepperoni')
+# make_pizza('mushrooms', 'green peppers', 'extra cheese')
 
 """
 8.5.1  结合使用位置实参和任意数量实参
 """
 
-# def make_pizza(size, *toppings):
-#     """
-#     概述要制作的披萨
-#     :param size:
-#     :param toppings:
-#     :return:
-#     """
-#     print('\nMaking a ' + str(size) + '-inch pizza with the following toppings:')
-#     for topping in toppings:
-#         print("- " + topping)
-#
-#
+
+def make_pizza(size, *toppings):
+    """
+    概述要制作的披萨
+    :param size:
+    :param toppings:
+    :return:
+    """
+    print('\nMaking a ' + str(size) + '-inch pizza with the following toppings:')
+    for topping in toppings:
+        print("- " + topping)
+
+
 # make_pizza(16, 'pepperoni')
 # make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
@@ -227,4 +279,5 @@ def build_profile(first, last, **user_info):
 
 
 user_profile = build_profile('albert', 'einstrin', location='princeton', field='physics')
-# print(user_profile)
+print(user_profile)
+
