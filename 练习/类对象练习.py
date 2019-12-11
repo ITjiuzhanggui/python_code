@@ -56,3 +56,63 @@ class Dog():
 """
 9.2  使用类和实例
 """
+
+
+# 编写一个表示汽车的类，他存储了有关汽车的信息，还有一个汇总这些信息的方法
+class Car():
+    """一次模拟汽车的简单尝试"""
+
+    def __init__(self, make, model, year):
+        """
+        初始化描述汽车的属性
+        :param make:
+        :param model:
+        :param year:
+        """
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_descriptive_name(self):
+        """
+        返回整洁的描述性信息
+        :return:
+        """
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name.title()
+
+
+# my_new_car = Car('audi', 'a4', '2019')
+# print(my_new_car.get_descriptive_name())
+
+"""
+9.2.2  给属性指定默认值
+"""
+
+
+class Car():
+    """一次模拟汽车的简单尝试"""
+
+    def __init__(self, make, model, year):
+        """
+        初始化描述汽车的属性
+        :param make:
+        :param model:
+        :param year:
+        """
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reding = 0
+
+    def read_odometer(self):
+        """
+        打印一条指出汽车里程的消息
+        :return:
+        """
+        print("This car has " + str(self.odometer_reding) + "miles on it.")
+
+
+# my_new_car = Car('audi', 'a4', '2019')
+# my_new_car.read_odometer()
+
