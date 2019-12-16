@@ -106,6 +106,17 @@ class Battery():
 
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
+    def get_range(self):
+        """打印一条信息，指出电瓶的续航里程"""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = "This car can go approximately " + str(range)
+        message += 'miles on a full charge.'
+        print(message)
+
 
 class ElectricCar(Car):
     """电动汽车的独特之处"""
@@ -122,7 +133,22 @@ class ElectricCar(Car):
         self.battery = Battery()
 
 
-my_tesla = ElectricCar('AMG', 'G63', '2020')
-print(my_tesla.get_descriptive_name())
-my_tesla.battery.describe_battery()
+# my_tesla = ElectricCar('AMG', 'G63', '2020')
+# print(my_tesla.get_descriptive_name())
+# my_tesla.battery.describe_battery()
+# my_tesla.battery.get_range()
+
+import collections
+from collections import OrderedDict
+
+favorite_languages = OrderedDict()
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite language is" + " " + language.title() + ".")
+
+
 
