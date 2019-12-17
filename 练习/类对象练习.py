@@ -302,13 +302,13 @@ class Car():
         else:
             print("You can't roll back an oddmeter!")
 
-    def increment_odometer(self, mileage):
+    def increment_odometer(self, mil):
         """
         将里程表读数增加指定的量
         :param mileage:
         :return:
         """
-        self.odometer_reding += mileage
+        self.odometer_reding += mil
 
 
 my_new_car = Car('BMW', 'MX5', '2020')
