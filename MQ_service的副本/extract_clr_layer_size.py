@@ -3,6 +3,7 @@ import sys
 import getopt
 import os
 
+
 class DockerSize(object):
     def __init__(self, fname):
         self.dockerfile = fname
@@ -14,14 +15,15 @@ class DockerSize(object):
         self.isbaselayer = 0
         self.sizestartpoint = 0
         self.layersize = 0
+
     def dumpdockerinfo(self):
-#        print("run  docker image history docker_image --no-trunc")
-        if self.dockerfile == 'base' :
+        #        print("run  docker image history docker_image --no-trunc")
+        if self.dockerfile == 'base':
             os.system('sudo docker image history clearlinux --no-trunc > tmp.dockersize')
-#            print("clearlinux:base")
+        #            print("clearlinux:base")
         else:
             os.system('sudo docker image history clearlinux/' + self.dockerfile + ' --no-trunc > tmp.dockersize')
-#            print("clearlinux/" + self.dockerfile)
+            #            print("clearlinux/" + self.dockerfile)
             os.system('sudo docker image history ' + self.dockerfile + '  --no-trunc > tmp.defdockersize')
 
     def show(self):
@@ -33,31 +35,30 @@ class DockerSize(object):
         os.system('rm tmp.defdockersize')
 
     def extractsizefromaline(self, oneline):
-#        print("\nextract the size info from a string: %s" % oneline)
-        if 'MB' in oneline: 
+        #        print("\nextract the size info from a string: %s" % oneline)
+        if 'MB' in oneline:
             self.layersize = float(oneline.split('MB')[0])
         elif 'GB' in oneline:
-            self.layersize = float(oneline.split('GB')[0])*1000
+            self.layersize = float(oneline.split('GB')[0]) * 1000
         elif 'kB' in oneline:
-            self.layersize = float(oneline.split('kB')[0])/1000
+            self.layersize = float(oneline.split('kB')[0]) / 1000
         elif 'B' in oneline:
-            self.layersize = float(oneline.split('B')[0])/1000000
-
+            self.layersize = float(oneline.split('B')[0]) / 1000000
 
     def getdockersizeinfo(self):
-#        print("extracing docker base layer and microservice layer info")
+        #        print("extracing docker base layer and microservice layer info")
         with open("./tmp.dockersize", 'r') as dockerhistory:
             lines = dockerhistory.readlines()
             for line in lines:
-                if self.sizestartpoint == 0 :
+                if self.sizestartpoint == 0:
                     self.sizestartpoint = line.find('SIZE')
-#                    print("\nSIZE starts from: %d" % self.sizestartpoint)
+                #                    print("\nSIZE starts from: %d" % self.sizestartpoint)
                 else:
                     # ADD is always used for the base layer
                     if 'ADD' in line:
                         self.isbaselayer = 1
                     self.extractsizefromaline(line[self.sizestartpoint:])
-                    if self.isbaselayer == 0 :
+                    if self.isbaselayer == 0:
                         self.microservicelayersize += self.layersize
                     else:
                         self.baselayersize += self.layersize
@@ -67,13 +68,13 @@ class DockerSize(object):
         with open("./tmp.defdockersize", 'r') as defdockerhistory:
             lines = defdockerhistory.readlines()
             for line in lines:
-                if self.sizestartpoint == 0 :
+                if self.sizestartpoint == 0:
                     self.sizestartpoint = line.find('SIZE')
-                else :
+                else:
                     if 'ADD' in line:
                         self.isbaselayer = 1
                     self.extractsizefromaline(line[self.sizestartpoint:])
-                    if self.isbaselayer == 0 :
+                    if self.isbaselayer == 0:
                         self.defmicroservicelayersize += self.layersize
                     else:
                         self.defbaselayersize += self.layersize
@@ -85,6 +86,7 @@ def help_menu():
     Options:
     -h: display help menu
     -f: clearlinux docker image to be analyzed, such as: php; base means clearlinux:base''')
+
 
 def main(argv):
     '''main function to get the image size info of a clearlinux docker image'''
@@ -100,7 +102,7 @@ def main(argv):
             help_menu()
             sys.exit()
         elif opt == '-f':
-            fname = arg 
+            fname = arg
     if not fname:
         print("Please specify a docker image, such as: php for clearlinux/php, or base for clearlinux:base!\n")
         help_menu()
@@ -110,8 +112,9 @@ def main(argv):
     lp.dumpdockerinfo()
     lp.getdockersizeinfo()
 
-#    lp.calc()
+    #    lp.calc()
     lp.show()
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
