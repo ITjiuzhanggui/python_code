@@ -1,5 +1,6 @@
 from .getname import get_formatted_name
-
+# import sys
+# print(sys.path)
 """
 11.1.1 单元测试和测试用例
 """
@@ -21,4 +22,3 @@ class NamesTestCase(unittest.TestCase):
 
 
 unittest.main()
-
