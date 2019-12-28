@@ -1,6 +1,5 @@
-from .getname import get_formatted_name
-# import sys
-# print(sys.path)
+from .test_nu import get_formatted_name
+
 """
 11.1.1 单元测试和测试用例
 """
